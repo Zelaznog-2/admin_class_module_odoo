@@ -1,11 +1,11 @@
 <odoo>
   <data>
-    <menuitem name="Admin Class" id="admin_class.menu_root"/>
+    <menuitem name="Admin Class Module Odoo" id="admin_class_module_odoo.menu_root"/>
 
-    <menuitem name="Aulas" id="admin_class.aula" parent="admin_class.menu_root" action="action_classroom_view" sequence="1"/>
-    <menuitem name="Profesores" id="admin_class.profesor" parent="admin_class.menu_root" action="action_teacher_view" sequence="2"/>
-    <menuitem name="Estudiantes" id="admin_class.estudiante" parent="admin_class.menu_root" action="action_student_view" sequence="3"/>
-    <menuitem name="Materias" id="admin_class.materias" parent="admin_class.menu_root" action="action_subject_view" sequence="4"/>
+    <menuitem name="Aulas" id="admin_class_module_odoo.aula" parent="admin_class_module_odoo.menu_root" action="action_classroom_view" sequence="1"/>
+    <menuitem name="Profesores" id="admin_class_module_odoo.profesor" parent="admin_class_module_odoo.menu_root" action="action_teacher_view" sequence="2"/>
+    <menuitem name="Estudiantes" id="admin_class_module_odoo.estudiante" parent="admin_class_module_odoo.menu_root" action="action_student_view" sequence="3"/>
+    <menuitem name="Materias" id="admin_class_module_odoo.materias" parent="admin_class_module_odoo.menu_root" action="action_subject_view" sequence="4"/>
 
 
   </data>

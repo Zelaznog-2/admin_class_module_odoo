@@ -1,5 +1,5 @@
 {
-    'name': "Admin Class",
+    'name': "admin class module odoo",
     'version': '1.0',
     'sequence': 1,
 
@@ -13,7 +13,7 @@
     'license': 'LGPL-3',
 
     'depends': ['base'],
-
+    'demo': ['demo/demo.xml'],
     'data': [
         'security/ir.model.access.csv',
         'views/menus_view.xml',
