@@ -1,0 +1,1 @@
+# admin_class_module_odoo
