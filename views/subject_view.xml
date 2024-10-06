@@ -1,0 +1,53 @@
+<?xml version='1.0' encoding='utf-8'?>
+
+<odoo>
+  <!-- Form -->
+  <record id="view_subject_form" model="ir.ui.view">
+    <field name="name">subject.form</field>
+    <field name="model">ad.subject</field>
+    <field name="arch" type="xml">
+      <form string="Subject">
+        <sheet>
+          <separator string="REGISTRAR MATERIA"/>
+          <div class="oe_title">
+            <h1>
+              <field name="name" placeholder="Nombre Materia"/>
+            </h1>
+          </div>
+          <group col="4">
+            <field name="code" placeholder="Codigo"/>
+            <field name="credit_hours" placeholder="Creditos de hora"/>
+            <field name="description" placeholder="Descripción" widget="text"/>
+          </group>
+          <group col="2">
+            <field name="classroom_ids" readonly="1"/>
+          </group>
+        </sheet>
+      </form>
+    </field>
+  </record>
+
+  <!-- table -->
+  <record id="view_subject_tree" model="ir.ui.view">
+    <field name="name">subject.tree</field>
+    <field name="model">ad.subject</field>
+    <field name="arch" type="xml">
+      <tree string="Subject">
+        <field name="name" placeholder="Nombre"/>
+        <field name="code"/>
+        <field name="credit_hours"/>
+        <field name="description"/>
+        <field name="classroom_ids"/>
+        </tree>
+      </field>
+    </record>
+
+    <!-- action -->
+    <record id="action_subject_view" model="ir.actions.act_window">
+      <field name="name">Materias</field>
+      <field name="type">ir.actions.act_window</field>
+      <field name="res_model">ad.subject</field>
+      <field name="view_mode">tree,form</field>
+    </record>
+
+</odoo>

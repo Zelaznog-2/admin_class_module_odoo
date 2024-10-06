@@ -1,0 +1,56 @@
+<?xml version='1.0' encoding='utf-8'?>
+
+<odoo>
+  <!-- Form -->
+  <record id="view_classroom_form" model="ir.ui.view">
+    <field name="name">classroom.form</field>
+    <field name="model">ad.classroom</field>
+    <field name="arch" type="xml">
+      <form string="Classroom">
+        <sheet>
+          <separator string="REGISTRAR AULA"/>
+          <div class="oe_title">
+            <h1>
+              <field name="name" placeholder="Nombre aula"/>
+            </h1>
+          </div>
+          <group col="4">
+            <field name="capacity" placeholder="Capacidad del aula"/>
+            <field name="start_date" placeholder="Fecha de inicio" widget="date"/>
+            <field name="end_date" placeholder="Fecha fin" widget="date"/>
+          </group>
+          <separator string="ASIGNAR INFORMACION"/>
+          <group col="3">
+          <field name="teacher_ids"/>
+          <field name="student_ids"/>
+          <field name="subject_ids"/>
+          </group>
+        </sheet>
+      </form>
+    </field>
+  </record>
+
+  <!-- table -->
+  <record id="view_classroom_tree" model="ir.ui.view">
+    <field name="name">classroom.tree</field>
+    <field name="model">ad.classroom</field>
+    <field name="arch" type="xml">
+      <tree string="Classroom">
+        <field name="name"/>
+        <field name="capacity"/>
+        <field name="current_students" />
+        <field name="start_date"/>
+        <field name="end_date"/>
+      </tree>
+    </field>
+  </record>
+
+  <!-- action -->
+  <record id="action_classroom_view" model="ir.actions.act_window">
+    <field name="name">Aulas</field>
+    <field name="type">ir.actions.act_window</field>
+    <field name="res_model">ad.classroom</field>
+    <field name="view_mode">tree,form</field>
+</record>
+
+</odoo>

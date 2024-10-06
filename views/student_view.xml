@@ -1,0 +1,49 @@
+<?xml version='1.0' encoding='utf-8'?>
+
+<odoo>
+  <!-- Form -->
+  <record id="view_student_form" model="ir.ui.view">
+    <field name="name">student.form</field>
+    <field name="model">ad.student</field>
+    <field name="arch" type="xml">
+      <form string="Student">
+        <sheet>
+          <separator string="REGISTRAR ESTUDIANTES"/>
+          <div class="oe_title">
+            <h1>
+              <field name="name" placeholder="Nombre del Estudiante"/>
+            </h1>
+          </div>
+          <group col="4">
+            <field name="last_name" placeholder="Apelldio del estudiante "/>
+            <field name="date_of_birth" placeholder="Fecha de nacimiento" widget="date"/>
+            <field name="classroom_id" />
+          </group>
+        </sheet>
+      </form>
+    </field>
+  </record>
+
+  <!-- table -->
+  <record id="view_student_tree" model="ir.ui.view">
+    <field name="name">student.tree</field>
+    <field name="model">ad.student</field>
+    <field name="arch" type="xml">
+      <tree string="Student">
+        <field name="name"/>
+        <field name="last_name"/>
+        <field name="date_of_birth" />
+        <field name="classroom_id" />
+        </tree>
+      </field>
+    </record>
+
+    <!-- action -->
+    <record id="action_student_view" model="ir.actions.act_window">
+      <field name="name">Estudiantes</field>
+      <field name="type">ir.actions.act_window</field>
+      <field name="res_model">ad.student</field>
+      <field name="view_mode">tree,form</field>
+    </record>
+
+</odoo>
